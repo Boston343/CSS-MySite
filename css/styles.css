@@ -1,3 +1,56 @@
 body {
+    margin: 0px;
+    text-align: center;
+}
+
+.three {
+    /* text-decoration: underline; */
+    font-weight: bold;
+}
+
+.top-cloud {
+    position: absolute;
+    top: 30px;
+    right: 30%;
+}
+
+.bottom-cloud {
+    position: absolute;
+}
+
+#top-container {
+    background-color: rgb(223, 246, 255);
+    position: relative;
+    padding-top: 100px;
+}
+
+#middle-container {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    /* position: absolute;
+    left: 200px;
+    top: 200px; */
+}
+
+#bottom-container {
+    height: 100px;
+    width: 100px;
     background-color: blue;
+    /* position: absolute;
+    left: 100px;
+    top: 100px; */
+}
+
+#extra-bottom-container {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+}
+
+h1 {
+    margin: 0px;
 }
