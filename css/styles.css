@@ -1,7 +1,52 @@
 body {
+    /* for h1 */
+    /* font-family: "Montserrat", sans-serif; */
+
+    /* for most text*/
+    font-family: "Noto Serif", serif;
+
+    /* for title */
+    /* font-family: "Parisienne", cursive;      */
+
     margin: 0px;
     text-align: center;
+
+    /* Humanish type sans-serif fonts are great for legibility in body, startups use often */
+    /* serif fonts are more authoritative. Can be more 'traditional' or 'modern' */
+
+    /*****************************************************************************/
+    /* Good font design rules to follow
+    use similar moods
+    use similar time era, don't mix traditional with modern
+    contrast serif-ness. Like heading is serif and body is sans-serif
+    can create interest by just varying the weights, like making the headers much bolder */
+
+    /* try to pick only two fonts in each design,  */
+    /* web safe fonts: https://www.w3schools.com/cssref/css_websafe_fonts.asp */
+    /* if you want to use another font, copy font stack from cssfontstack.com */
+    /* ex. */
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+
+    /* if you really want a specific font, go to fonts.google.com */
+
+    /* web safe sans-serif fonts I like: verdana, tahoma, trebuchet ms */
+    /* for safe "serif" fonts: use Times New Roman, or Georgia */
 }
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0px;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+/*****************************************************************************/
 
 .three {
     /* text-decoration: underline; */
@@ -16,6 +61,12 @@ body {
 
 .bottom-cloud {
     position: absolute;
+}
+
+/*****************************************************************************/
+
+#main-title {
+    font-family: "Parisienne", cursive;
 }
 
 #top-container {
@@ -49,8 +100,4 @@ body {
     /* position: absolute;
     left: 0;
     top: 0; */
-}
-
-h1 {
-    margin: 0px;
 }
