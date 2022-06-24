@@ -63,6 +63,14 @@ h3 {
     position: absolute;
 }
 
+.skills-img {
+    width: 100px;
+}
+
+.blockchain-img {
+    border-radius: 50%;
+}
+
 /*****************************************************************************/
 
 #main-title {
@@ -76,28 +84,7 @@ h3 {
 }
 
 #middle-container {
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    /* position: absolute;
-    left: 200px;
-    top: 200px; */
 }
 
 #bottom-container {
-    height: 100px;
-    width: 100px;
-    background-color: blue;
-    /* position: absolute;
-    left: 100px;
-    top: 100px; */
-}
-
-#extra-bottom-container {
-    height: 100px;
-    width: 100px;
-    background-color: yellow;
-    /* position: absolute;
-    left: 0;
-    top: 0; */
 }
