@@ -1,3 +1,28 @@
+/* examples of media queries using mobile first design philosphy
+    should probably follow https://www.rainbowarray.com/responsive-web-design/2011/12/29/default-breakpoints-are-dead 
+    though to test the natural breakpoints you should place in your site */
+
+.example-media-queries {
+    @media (min-width: 320px) {
+        /* smartphones, iPhone, portrait 480x320 phones */
+    }
+    @media (min-width: 481px) {
+        /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    }
+    @media (min-width: 641px) {
+        /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    }
+    @media (min-width: 961px) {
+        /* tablet, landscape iPad, lo-res laptops ands desktops */
+    }
+    @media (min-width: 1025px) {
+        /* big landscape tablets, laptops, and desktops */
+    }
+    @media (min-width: 1281px) {
+        /* hi-res laptops and desktops */
+    }
+}
+
 body {
     color: #40514e;
 
@@ -93,6 +118,38 @@ p {
     margin: auto;
 }
 
+.top-cloud-container {
+    display: flex;
+    justify-content: end;
+    padding: 30px 20% 0 60%;
+    padding-right: 20%;
+    padding-left: 60%;
+}
+
+.top-cloud {
+    max-width: 100%;
+}
+
+.bottom-cloud-container {
+    display: flex;
+    padding-right: 60%;
+    padding-left: 20%;
+}
+
+.bottom-cloud {
+    max-width: 100%;
+}
+
+.mountain-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.mountain {
+    max-width: 100%;
+}
+
 .skill-title {
     margin: 80px auto;
 }
@@ -164,17 +221,6 @@ p {
     font-weight: bold;
 }
 
-.top-cloud {
-    position: absolute;
-    right: 20%;
-    top: 30px;
-}
-
-.bottom-cloud {
-    position: absolute;
-    left: 20%;
-}
-
 .webdesign-img {
     float: left;
     margin-right: 30px;
@@ -203,6 +249,10 @@ p {
     background-color: rgb(232, 249, 253);
     padding-top: 100px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    /* flex: 1 1 100%; */
+    justify-content: center;
 }
 
 #middle-container {
