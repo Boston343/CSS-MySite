@@ -2,6 +2,11 @@
     should probably follow https://www.rainbowarray.com/responsive-web-design/2011/12/29/default-breakpoints-are-dead 
     though to test the natural breakpoints you should place in your site */
 
+:root {
+    /* Note: CSS variables do not currently work in media queries */
+    --design-change-width: 992px;
+}
+
 .example-media-queries {
     @media (min-width: 320px) {
         /* smartphones, iPhone, portrait 480x320 phones */
@@ -22,6 +27,8 @@
         /* hi-res laptops and desktops */
     }
 }
+
+/* 992px is cutoff point */
 
 body {
     color: #40514e;
@@ -103,7 +110,7 @@ hr {
     border-width: 5px;
     border-color: lightgrey;
     margin: 80px auto; /* 80px top and bottom, centered left and right */
-    width: 5%;
+    width: 60px;
 }
 
 p {
@@ -178,8 +185,10 @@ p {
 }
 
 .contact-me {
-    width: 40%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto 16px;
+    max-width: 600px;
 }
 
 .get-in-touch {
@@ -188,6 +197,13 @@ p {
 
 .availability-notice {
     margin: 40px auto;
+}
+
+.btn-hldr {
+    display: flex;
+    justify-content: center;
+    position: relative; /* so the envelope image can be "absolute" and base off this edge */
+    margin: 25px 0 80px 0;
 }
 
 .btn {
@@ -199,7 +215,7 @@ p {
     background-image: linear-gradient(to bottom, #0aa1dd, #0f71aa);
     -webkit-border-radius: 10;
     -moz-border-radius: 10;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: "Montserrat", sans-serif;
     color: #ffffff;
     font-size: 20px;
@@ -207,8 +223,26 @@ p {
     text-decoration: none;
 
     /* I added this final stuff. The rest was generated from https://css3buttongenerator.com/ */
-    margin: 50px auto 80px auto;
-    display: inline-block;
+    width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .btn {
+        width: auto;
+    }
+}
+
+.btn .fa-envelope {
+    position: absolute;
+    left: 11%;
+}
+
+@media screen and (min-width: 992px) {
+    .btn .fa-envelope {
+        position: relative;
+        margin-right: 10px;
+        left: 0;
+    }
 }
 
 .btn:hover {
@@ -254,7 +288,7 @@ p {
 
 #top-container {
     background-color: rgb(232, 249, 253);
-    padding-top: 100px;
+    padding-top: 70px;
     position: relative;
     display: flex;
     flex-direction: column;
