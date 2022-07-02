@@ -71,9 +71,7 @@ h1 {
     /* this scales with browser font size settings */
     /* font-size: 500%;  */
     /* this also scales with browser font size settings. rem is better than em as it doesn't inheret from parent */
-    font-size: 5rem;
-    /* prefered way to give line height is just with a number. This is multiplier by text height */
-    line-height: 2;
+    font-size: 3rem;
     /* margin: 0px;
     margin-top: 50px; */
     margin: 50px auto 0 auto;
@@ -114,12 +112,17 @@ hr {
 }
 
 @media screen and (min-width: 992px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
     hr {
         margin: 90px auto;
     }
 }
 
 p {
+    /* prefered way to give line height is just with a number. This is multiplier by text height */
     line-height: 2;
     margin: 0;
 }
@@ -136,6 +139,11 @@ p {
 
 .top-cloud {
     max-width: 100%;
+}
+
+#top-container h2 {
+    margin: 20px 0;
+    font-size: 1.5rem;
 }
 
 .bottom-cloud-container {
