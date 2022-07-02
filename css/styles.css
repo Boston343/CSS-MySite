@@ -109,8 +109,14 @@ hr {
     border-top-style: dotted;
     border-width: 5px;
     border-color: lightgrey;
-    margin: 80px auto; /* 80px top and bottom, centered left and right */
+    margin: 50px auto; /* 40px top and bottom, centered left and right */
     width: 60px;
+}
+
+@media screen and (min-width: 992px) {
+    hr {
+        margin: 90px auto;
+    }
 }
 
 p {
@@ -160,8 +166,14 @@ p {
 
 .profile-img {
     max-width: 100%;
-    max-height: 192px;
-    padding-top: 60px;
+    max-height: 160px;
+    padding-top: 45px;
+}
+
+@media screen and (min-width: 992px) {
+    .profile-img {
+        padding-top: 90px;
+    }
 }
 
 .skills {
@@ -203,7 +215,7 @@ p {
     display: flex;
     justify-content: center;
     position: relative; /* so the envelope image can be "absolute" and base off this edge */
-    margin: 25px 0 80px 0;
+    margin: 30px 0 70px 0;
 }
 
 .btn {
@@ -226,18 +238,20 @@ p {
     width: 100%;
 }
 
-@media screen and (min-width: 992px) {
-    .btn {
-        width: auto;
-    }
-}
-
 .btn .fa-envelope {
     position: absolute;
     left: 11%;
 }
 
 @media screen and (min-width: 992px) {
+    .btn-hldr {
+        margin: 30px 0 110px 0;
+    }
+
+    .btn {
+        width: auto;
+    }
+
     .btn .fa-envelope {
         position: relative;
         margin-right: 10px;
