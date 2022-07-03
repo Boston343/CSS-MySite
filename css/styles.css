@@ -1,3 +1,35 @@
+/* examples of media queries using mobile first design philosphy
+    should probably follow https://www.rainbowarray.com/responsive-web-design/2011/12/29/default-breakpoints-are-dead 
+    though to test the natural breakpoints you should place in your site */
+
+:root {
+    /* Note: CSS variables do not currently work in media queries */
+    --design-change-width: 992px;
+}
+
+.example-media-queries {
+    @media (min-width: 320px) {
+        /* smartphones, iPhone, portrait 480x320 phones */
+    }
+    @media (min-width: 481px) {
+        /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    }
+    @media (min-width: 641px) {
+        /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    }
+    @media (min-width: 961px) {
+        /* tablet, landscape iPad, lo-res laptops ands desktops */
+    }
+    @media (min-width: 1025px) {
+        /* big landscape tablets, laptops, and desktops */
+    }
+    @media (min-width: 1281px) {
+        /* hi-res laptops and desktops */
+    }
+}
+
+/* 992px is cutoff point */
+
 body {
     color: #40514e;
 
@@ -39,9 +71,7 @@ h1 {
     /* this scales with browser font size settings */
     /* font-size: 500%;  */
     /* this also scales with browser font size settings. rem is better than em as it doesn't inheret from parent */
-    font-size: 5rem;
-    /* prefered way to give line height is just with a number. This is multiplier by text height */
-    line-height: 2;
+    font-size: 3rem;
     /* margin: 0px;
     margin-top: 50px; */
     margin: 50px auto 0 auto;
@@ -77,40 +107,177 @@ hr {
     border-top-style: dotted;
     border-width: 5px;
     border-color: lightgrey;
-    margin: 80px auto; /* 80px top and bottom, centered left and right */
-    width: 5%;
+    margin: 50px auto; /* 40px top and bottom, centered left and right */
+    width: 60px;
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    hr {
+        margin: 90px auto;
+    }
 }
 
 p {
+    /* prefered way to give line height is just with a number. This is multiplier by text height */
     line-height: 2;
     margin: 0;
 }
 
 /*****************************************************************************/
 
-.profile {
-    width: 30%;
-    margin: auto;
+.top-cloud-container {
+    display: flex;
+    justify-content: end;
+    padding: 30px 20% 0 60%;
+    padding-right: 20%;
+    padding-left: 60%;
 }
 
-.skill-title {
-    margin: 80px auto;
+.top-cloud {
+    max-width: 100%;
+}
+
+#top-container h2 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+.bottom-cloud-container {
+    display: flex;
+    padding-right: 60%;
+    padding-left: 20%;
+}
+
+.bottom-cloud {
+    max-width: 100%;
+}
+
+.mountain-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.mountain {
+    max-width: 100%;
+}
+
+.profile {
+    max-width: 460px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.profile-img {
+    max-width: 100%;
+    max-height: 160px;
+    padding-top: 45px;
+}
+
+.profile h3 {
+    margin: 30px auto;
+}
+
+@media screen and (min-width: 992px) {
+    .profile-img {
+        padding-top: 90px;
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    padding: 0 15px;
+    position: relative;
 }
 
 .skill-row {
-    margin: 0 auto;
-    text-align: left;
-    width: 45%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-.skill-separator {
-    clear: left;
-    margin-top: 100px;
+.skill-text {
+    margin: 10px auto 30px auto;
+}
+
+.skill-text-end {
+    margin-bottom: 0;
+}
+
+.skills h3 {
+    margin-bottom: 30px;
+}
+
+.skill-title {
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+.container-webdesign-img {
+    display: flex;
+    margin-left: 5%;
+}
+
+.skill-row img {
+    height: 10rem;
+}
+
+.webdesign-img {
+    /* float: left; */
+}
+
+.container-blockchain-img {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    margin-top: 30px;
+}
+
+.blockchain-img {
+    /* float: right; */
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 992px) {
+    .skills {
+        max-width: 860px;
+    }
+
+    .skill-row {
+        flex-direction: row;
+        margin: 30px auto;
+        text-align: left;
+    }
+
+    .skill-row-end {
+        margin-bottom: 0;
+    }
+
+    .skill-text {
+        margin: 0 50px;
+    }
+
+    .container-skill-img {
+        align-items: center;
+    }
+
+    .container-blockchain-img {
+        order: 1;
+        margin-top: 0;
+    }
 }
 
 .contact-me {
-    width: 40%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto 16px;
+    max-width: 600px;
 }
 
 .get-in-touch {
@@ -119,6 +286,13 @@ p {
 
 .availability-notice {
     margin: 40px auto;
+}
+
+.btn-hldr {
+    display: flex;
+    justify-content: center;
+    position: relative; /* so the envelope image can be "absolute" and base off this edge */
+    margin: 30px 0 70px 0;
 }
 
 .btn {
@@ -130,7 +304,7 @@ p {
     background-image: linear-gradient(to bottom, #0aa1dd, #0f71aa);
     -webkit-border-radius: 10;
     -moz-border-radius: 10;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: "Montserrat", sans-serif;
     color: #ffffff;
     font-size: 20px;
@@ -138,8 +312,28 @@ p {
     text-decoration: none;
 
     /* I added this final stuff. The rest was generated from https://css3buttongenerator.com/ */
-    margin: 50px auto 80px auto;
-    display: inline-block;
+    width: 100%;
+}
+
+.btn .fa-envelope {
+    position: absolute;
+    left: 11%;
+}
+
+@media screen and (min-width: 992px) {
+    .btn-hldr {
+        margin: 30px 0 110px 0;
+    }
+
+    .btn {
+        width: auto;
+    }
+
+    .btn .fa-envelope {
+        position: relative;
+        margin-right: 10px;
+        left: 0;
+    }
 }
 
 .btn:hover {
@@ -164,35 +358,6 @@ p {
     font-weight: bold;
 }
 
-.top-cloud {
-    position: absolute;
-    right: 20%;
-    top: 30px;
-}
-
-.bottom-cloud {
-    position: absolute;
-    left: 20%;
-}
-
-.webdesign-img {
-    float: left;
-    margin-right: 30px;
-    width: 12rem;
-}
-
-.blockchain-img {
-    border-radius: 50%;
-    float: right;
-    margin-left: 30px;
-    width: 12rem;
-}
-
-.profile-img {
-    width: 12rem;
-    padding-top: 60px;
-}
-
 /*****************************************************************************/
 
 #main-title {
@@ -201,11 +366,17 @@ p {
 
 #top-container {
     background-color: rgb(232, 249, 253);
-    padding-top: 100px;
+    padding-top: 70px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #middle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #bottom-container {

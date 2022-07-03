@@ -16,63 +16,80 @@
     <meta name="author" content="Reap3r">
     <meta name="keywords" content="Reap3r,Boston343,LastChaos343,html,css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/de2ee173f4.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="images/favicon1.png">
 </head>
 
 <body>
-    <div id="top-container">
-        <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
+    <header id="top-container">
+        <div class="top-cloud-container">
+            <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
+        </div>
         <h1 id="main-title">I'm Reap3r.</h1>
         <h2>A n<span class="three">3</span>rd.</h2>
-        <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
-        <img src="images/mountain.png" alt="mountain-img">
-    </div>
+        <div class="bottom-cloud-container">
+            <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
+        </div>
+        <div class="mountain-container">
+            <img class="mountain" src="images/mountain.png" alt="mountain-img">
+        </div>
+    </header>
 
-    <div id="middle-container">
+    <section id="middle-container">
         <div class="profile">
             <img class="profile-img" src="images/Reap3r.png" alt="Reap3r-img">
-            <h2>Hello.</h2>
+            <h3>Hello.</h3>
             <p>I am a web designer based in Miami, Florida. I have a passion for web design and interfacing with web3.
             </p>
         </div>
+
         <hr>
+
         <div class="skills">
             <h2 class="skill-title">My Skills.</h2>
             <div class="skill-row">
-                <img class="webdesign-img" src="images/webdesign.png" alt="webdesign-img">
-                <h3>Website Development</h3>
-                <p>As a developer, I focus on conveying the message you want to send in the
-                    clearest way possible. I can create websites to run across various devices using the latest
-                    technologies. </p>
+                <div class="container-skill-img container-webdesign-img">
+                    <img class="webdesign-img" src="images/webdesign.png" alt="webdesign-img">
+                </div>
+                <div class="skill-text">
+                    <h3>Website Development</h3>
+                    <p>As a developer, I focus on conveying the message you want to send in the clearest way possible. I
+                        can create websites to run across various devices using the latest technologies. </p>
+                </div>
             </div>
-            <div class="skill-separator">
+            <div class="skill-row skill-row-end">
+                <div class="container-blockchain-img">
+                    <img class="blockchain-img" src="images/blockchain.gif" alt="blockchain-img">
+                </div>
+                <div class="skill-text skill-text-end">
+                    <h3>Web3 Enabling</h3>
+                    <p>I can design your website to interface with the latest in blockchain technology &#45;
+                        including NFT's, user verification, and smart contract interaction. </p>
+                </div>
+            </div>
 
-            </div>
-            <div class="skill-row">
-                <!-- <img class="" src="images/blockchain.png" alt="blockchain-img"> -->
-                <img class="blockchain-img blockchain-img" src="images/blockchain.gif" alt="blockchain-img">
-                <h3>Web3 Enabling</h3>
-                <p>I can design your website to interface with the latest in blockchain technology &#45;
-                    including NFT's, user verification, and smart contract interaction. </p>
-            </div>
         </div>
+
         <hr>
+
         <div class="contact-me">
-            <h2 class="get-in-touch">Get In Touch</h2>
+            <h2 class="get-in-touch">Get In Touch.</h2>
             <h3 class="availability-notice">I am currently <span><u>un</u></span>available for freelance work.</h3>
             <p>If you have a project that you want to get started, or think you need my help with something, then get in
                 touch.</p>
-            <a class="btn" href="mailto:BowTiedReap3r@gmail.com" target="_blank">CONTACT ME</a>
+            <div class="btn-hldr">
+                <a class="btn" href="mailto:BowTiedReap3r@gmail.com" target="_blank"><i
+                        class="fa-solid fa-envelope"></i>CONTACT ME</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-
-    <div id="bottom-container">
+    <footer id="bottom-container">
         <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
         <a class="footer-link" href="https://twitter.com/LastChaos343">Twitter</a>
         <a class="footer-link" href="mailto:BowTiedReap3r@gmail.com" target="_blank">Hire me</a>
         <p id="copyright">© 2022 Reap3r. All rights reserved.</p>
-    </div>
+    </footer>
 
 
     </div>
